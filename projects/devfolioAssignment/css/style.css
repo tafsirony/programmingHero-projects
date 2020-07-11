@@ -5,8 +5,10 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
 .container {
   width: 80%;
+  margin: 0 auto;
 }
 h1 {
   font-size: 50px;
@@ -31,6 +33,9 @@ header {
   background-image: url(../images/biography-bg.png);
   background-repeat: no-repeat;
   background-size: 100%;
+  overflow: hidden;
+  clear: both;
+  position: relative;
 }
 .half-width {
   width: 40%;
@@ -66,23 +71,29 @@ header {
   margin-bottom: 200px;
   background-size: 100%;
 
-  padding: 50px;
+  padding: 50px 10px;
 }
 .work-text {
   text-align: center;
   padding: 20px;
+  margin-bottom: 50px;
 }
 .workfolio {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  flex-direction: row;
 }
 .work1 {
   /* width: 30%; */
-  padding: 30px;
+  /* padding: 30px; */
+  flex-basis: 32%;
 }
 .work1 img {
   width: 100%;
+}
+.work1 img:hover {
+  border: 1px solid rgb(162, 157, 190);
 }
 .testimonial {
   background-image: url(../images/footer-bg.png);
@@ -120,6 +131,9 @@ header {
   align-content: space-around;
   border-radius: 15px;
   width: 600px;
+}
+.cta:hover {
+  background: rgb(226, 36, 147);
 }
 .email {
   text-decoration: none;
