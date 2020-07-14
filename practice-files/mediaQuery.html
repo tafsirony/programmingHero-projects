@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .food {
+      border: 2px solid lightgray;
+      border-radius: 30px;
+      margin: 10px;
+      width: 350px;
+      padding: 20px;
+    }
+    .food img {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .container .food {
+        background-color: rgb(138, 162, 240);
+      }
+    }
+    @media (min-width: 1200px) {
+      .container .food {
+        background-color: lightgreen;
+      }
+    }
+  </style>
+  <body class="container">
+    <div class="food">
+      <img
+        src="https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/healthy-food-bowl.jpg?fit=1200%2C800&ssl=1"
+        alt=""
+      />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
+        possimus delectus consequuntur omnis maiores excepturi distinctio,
+        provident voluptas alias ratione.
+      </p>
+    </div>
+    <div class="food">
+      <img
+        src="https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/healthy-food-bowl.jpg?fit=1200%2C800&ssl=1"
+        alt=""
+      />
+      <p>
+        Fugit deserunt tempora explicabo alias autem sapiente eveniet, quaerat,
+        inventore dolorum magni illo commodi voluptatem ratione perspiciatis
+        ducimus. Magnam, aliquid!
+      </p>
+    </div>
+    <div class="food">
+      <img
+        src="https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/healthy-food-bowl.jpg?fit=1200%2C800&ssl=1"
+        alt=""
+      />
+      <p>
+        Iure blanditiis ex, consequuntur, id delectus error numquam sit harum
+        quam porro, repellat quisquam exercitationem maiores molestiae molestias
+        rem deleniti!
+      </p>
+    </div>
+    <div class="food">
+      <img
+        src="https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/healthy-food-bowl.jpg?fit=1200%2C800&ssl=1"
+        alt=""
+      />
+      <p>
+        Vitae minus deleniti saepe corrupti sequi ea sit officiis optio
+        veritatis nisi voluptas quis, voluptate laborum non eius natus sapiente.
+      </p>
+    </div>
+    <div class="food">
+      <img
+        src="https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/healthy-food-bowl.jpg?fit=1200%2C800&ssl=1"
+        alt=""
+      />
+      <p>
+        Labore tempora porro laboriosam ullam error! Iusto optio exercitationem
+        aut porro earum, iste at a quo excepturi mollitia, maiores similique.
+      </p>
+    </div>
+    <div class="food">
+      <img
+        src="https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/12/healthy-food-bowl.jpg?fit=1200%2C800&ssl=1"
+        alt=""
+      />
+      <p>
+        Aliquam, nulla quod placeat reprehenderit velit sit ut! Dolores ipsum
+        pariatur sed facere quod error debitis tempore aut dignissimos
+        necessitatibus?
+      </p>
+    </div>
+  </body>
+</html>

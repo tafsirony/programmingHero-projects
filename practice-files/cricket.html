@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket</title>
+    <style>
+      .ball {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: red;
+        position: relative;
+        left: 670px;
+        bottom: 230px;
+        transition: transform 3s ease-in-out 0.4s;
+      }
+      .field:hover .ball {
+        transform: translate(600px, -200px);
+      }
+      .bat {
+        transition: transform 0.7s ease-in-out;
+      }
+      .bat:hover {
+        transform: rotate(-60deg);
+        transform-origin: 100% 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="field">
+      <img
+        class="bat"
+        src="https://www.bigvalueshop.com/wp-content/uploads/2019/03/SS_Master-1500-English-Willow-Cricket-BAT.jpg"
+      />
+
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
