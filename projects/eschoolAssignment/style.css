@@ -93,6 +93,11 @@ body {
 .card-footer {
   border: none;
 }
+.card:hover {
+    background: #ffffff;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 18px;
+  }
 section {
   margin-bottom: 20px;
 }
