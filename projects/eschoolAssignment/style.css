@@ -1,0 +1,143 @@
+body {
+  background: #ffffff;
+}
+.top-bg {
+  background: #f0fff0;
+}
+.green-font {
+  color: #21b573;
+}
+.navbar-light .navbar-nav {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  font-weight: 500;
+  color: #000000;
+}
+.jumbotron {
+  background: #f0fff0;
+}
+.jumbotron h1 {
+  text-align: left;
+}
+.jumbotron p {
+  width: 403px;
+}
+.btn-green {
+  background: #21b573;
+  border-radius: 33px;
+  color: #ffffff;
+}
+.inner {
+  background: #f8fffb;
+  border-radius: 10px;
+  padding: 40px 40px;
+  /* text-align: center; */
+  margin-bottom: 10px;
+}
+.inner:hover {
+  background: #ffffff;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.inner h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  /* clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap; */
+}
+.inner p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.inner img {
+  /* padding: 5%; */
+  width: 60px;
+  height: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+.card {
+  background: #ffffff;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  border: none;
+}
+.card img {
+  padding: 5%;
+}
+.card-footer p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 15px;
+}
+.card-footer {
+  border: none;
+}
+section {
+  margin-bottom: 20px;
+}
+section h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.testimonial {
+  margin-bottom: 100px;
+}
+/* .testimonial-area {
+   padding: 40px 190px; 
+} */
+.testimonial-area img {
+  width: 120px;
+  height: 120px;
+}
+
+footer {
+  background-color: #282531;
+  color: #ffffff;
+}
+footer .row {
+  padding-top: 50px;
+}
+footer .nav a {
+  color: #ffffff;
+  line-height: 30px;
+}
+footer p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
+.copyright {
+  text-align: center;
+  color: #cdcdcd;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
