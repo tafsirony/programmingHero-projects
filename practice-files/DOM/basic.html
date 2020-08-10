@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Dom</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div>
+          <h4 class="title mark">title-1</h4>
+          <p id="first-article">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id optio
+            nisi iste nihil, repudiandae similique.
+          </p>
+        </div>
+        <div>
+          <h4 title="Hello" class="title" id="mid">title-2</h4>
+          <p id="middlePara">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Consequatur voluptatibus minus repellat numquam dolorum cum.
+          </p>
+        </div>
+        <div>
+          <h4 class="title mark">title-3</h4>
+          <p class="last">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
+            reiciendis, necessitatibus commodi aspernatur deleniti nobis?
+          </p>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.body.style.backgroundColor = "tomato";
+      // changing attribute
+      document.getElementById("mid").setAttribute("Title", "I am changed");
+      // adding content in html with js
+      const article = document.getElementById("first-article");
+      const newParagraph = document.createElement("p");
+      newParagraph.innerHTML = "Hello welcome to this section";
+      newParagraph.style.backgroundColor = "yellow";
+      article.appendChild(newParagraph);
+      // change content
+      const changeContent = document.querySelector(".last");
+      changeContent.innerHTML =
+        "Hey hey I was not this paragraph, DOm Changed me!";
+      changeContent.style.backgroundColor = "cyan";
+      changeContent.style.fontSize = "20px";
+
+      var changePara = document.getElementById("middlePara");
+      changePara.innerHTML = "Dom Manupulated paragraph";
+      changePara.style.backgroundColor = "green";
+      changePara.style.fontSize = "22px";
+
+      var changeTitle = document.getElementsByClassName("mark");
+      console.log(changeTitle);
+      for (var i = 0; i < changeTitle.length; i++) {
+        var element = changeTitle[i];
+        console.log(element);
+        element.innerHTML = "Dom Manupulated title";
+        element.style.backgroundColor = "blue";
+        element.style.fontSize = "25px";
+      }
+      // below this method not possible because document.getElementsByClassName('mark')
+      // will returns an array.You cannot directly get the innerHtml.
+      //if we want  to manipulate single element we may use querySelector
+      //   changeTitle.innerHTML = "Dom Manupulated title";
+      //   changeTitle.style.backgroundColor = "blue";
+      //   changeTitle.style.fontSize = "25px";
+    </script>
+  </body>
+</html>
