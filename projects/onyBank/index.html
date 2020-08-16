@@ -116,7 +116,6 @@
       const depositBtn = document.getElementById("addDeposit");
       depositBtn.addEventListener("click", function () {
         const depositNumber = getInputNum("depositAmount");
-        if(depositNumber)
         updateStatus("currentBalance", depositNumber);
         updateStatus("currentDeposit", depositNumber);
         document.getElementById("depositAmount").value = "";
