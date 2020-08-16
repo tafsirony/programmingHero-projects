@@ -13,14 +13,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="top">
+      <h1 class="text-center">
+        Welcome to Ony Bank Ltd.
+      </h1>
+    </div>
+
     <section class="d-flex justify-content-center">
       <div id="auth-area">
-        <h1 class="text-center">
-          Welcome to <br />
-          Ony Bank Ltd.
-        </h1>
+        <h2 class="text-center">Login</h2>
         <div class="mt-5" id="login-area">
-          <h4>Login</h4>
           <form action="">
             <input
               type="text"
@@ -43,52 +45,62 @@
       </div>
     </section>
 
-    <div id="dashboard">
-      <h1>Transaction Area</h1>
-      <div class="row">
-        <div class="col-4">
-          <div class="deposit status">
-            <h5>Deposit</h5>
-            <h2>$ <span id="currentDeposit">00</span></h2>
+    <section class="d-flex justify-content-center">
+      <div id="dashboard">
+        <h5>Today's Date: <span id="date"></span></h5>
+        <hr>
+        <h1>Transaction Area</h1>
+        <hr>
+        <div class="row">
+          <div class="col-4">
+            <div class="deposit status">
+              <h5>Deposit</h5>
+              <h2>$ <span id="currentDeposit">00</span></h2>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="withdraw status">
+              <h5>Withdraw</h5>
+              <h2>$ <span id="currentWithdraw">00</span></h2>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="balance status">
+              <h5>Balance</h5>
+              <h2>$ <span id="currentBalance">120</span></h2>
+            </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="withdraw status">
-            <h5>Withdraw</h5>
-            <h2>$ <span id="currentWithdraw">00</span></h2>
+        <hr>
+        <div class="row">
+          <div class="col-5" id="auth-area">
+            <h4>Deposit</h4>
+            <input
+              id="depositAmount"
+              type="number"
+              class="form-control mb-2"
+              placeholder="Deposit amount"
+            />
+            <button id="addDeposit" class="btn btn-success">Deposit</button>
           </div>
-        </div>
-        <div class="col-4">
-          <div class="balance status">
-            <h5>Balance</h5>
-            <h2>$ <span id="currentBalance">120</span></h2>
+          <div class="col-5 offset-2" id="auth-area">
+            <h4>Withdraw</h4>
+            <input
+              id="withDrawAmount"
+              type="number"
+              class="form-control mb-2"
+              placeholder="Withdraw Amount"
+            />
+            <button id="addWithdraw" class="btn btn-success">Withdraw</button>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-5" id="auth-area">
-          <h4>Deposit</h4>
-          <input
-            id="depositAmount"
-            type="number"
-            class="form-control mb-2"
-            placeholder="Deposit amount"
-          />
-          <button id="addDeposit" class="btn btn-success">Deposit</button>
-        </div>
-        <div class="col-5 offset-2" id="auth-area">
-          <h4>Withdraw</h4>
-          <input
-            id="withDrawAmount"
-            type="number"
-            class="form-control mb-2"
-            placeholder="Withdraw Amount"
-          />
-          <button id="addWithdraw" class="btn btn-success">Withdraw</button>
-        </div>
-      </div>
-    </div>
-
+    </section>
+   
+    <hr>
+    <footer>
+      <p class="text-center mt-5">All rights reserver by Tafsir Ony</p>
+    </footer>
     <script>
       //login btn event handler
       const loginBtn = document.getElementById("btnLogin");
@@ -104,7 +116,7 @@
       const depositBtn = document.getElementById("addDeposit");
       depositBtn.addEventListener("click", function () {
         const depositNumber = getWithdraw("depositAmount");
-
+        if(depositNumber)
         updateStatus("currentBalance", depositNumber);
         updateStatus("currentDeposit", depositNumber);
         document.getElementById("depositAmount").value = "";
@@ -115,22 +127,25 @@
         .addEventListener("click", function () {
           const withDrawNumber = getWithdraw("withDrawAmount");
           updateStatus("currentWithdraw", withDrawNumber);
-          updateStatus("currentBalance", -1*withDrawNumber);
+          updateStatus("currentBalance", -1 * withDrawNumber);
           document.getElementById("withDrawAmount").value = "";
         });
+      //function for deposit dollar
+      function updateStatus(id, addedNumber) {
+        const current = document.getElementById(id).innerText;
+        const currentNumer = parseFloat(current);
+        const total = addedNumber + currentNumer;
+        document.getElementById(id).innerText = total;
+      }
       //function for withdraw
       function getWithdraw(id) {
         const amount = document.getElementById(id).value;
         const amountNumber = parseFloat(amount);
         return amountNumber;
       }
-      //function for update dollar
-      function updateStatus(id, depositNumber) {
-        const current = document.getElementById(id).innerText;
-        const currentNumer = parseFloat(current);
-        const total = depositNumber + currentNumer;
-        document.getElementById(id).innerText = total;
-      }
+      // date
+      let date = new Date();
+      const dateArea = (document.getElementById("date").textContent = date);
     </script>
   </body>
 </html>

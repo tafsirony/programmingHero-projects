@@ -1,7 +1,10 @@
-
+.top{
+  background-color: orange;
+  padding: 40px;
+}
 #auth-area {
   /* width: 400px; */
-  margin-top: 150px;
+  margin-top: 50px;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px gray;
@@ -11,6 +14,7 @@
 #dashboard {
   display: none;
   padding: 100px;
+  width: 800px;
 }
 .withdraw {
   background-color: slateblue;
@@ -22,7 +26,7 @@
   background-color: orangered;
 }
 .status {
-  margin: 0 20px;
+  /* margin: 0 20px; */
   padding: 20px;
   border-radius: 10px;
   color: white;
