@@ -115,7 +115,7 @@
       //deposit btn event handler
       const depositBtn = document.getElementById("addDeposit");
       depositBtn.addEventListener("click", function () {
-        const depositNumber = getWithdraw("depositAmount");
+        const depositNumber = getInputNum("depositAmount");
         if(depositNumber)
         updateStatus("currentBalance", depositNumber);
         updateStatus("currentDeposit", depositNumber);
@@ -138,7 +138,7 @@
         document.getElementById(id).innerText = total;
       }
       //function for withdraw
-      function getWithdraw(id) {
+      function getInputNum(id) {
         const amount = document.getElementById(id).value;
         const amountNumber = parseFloat(amount);
         return amountNumber;
