@@ -124,7 +124,7 @@
       const withdrawBtn = document
         .getElementById("addWithdraw")
         .addEventListener("click", function () {
-          const withDrawNumber = getWithdraw("withDrawAmount");
+          const withDrawNumber = getInputNum("withDrawAmount");
           updateStatus("currentWithdraw", withDrawNumber);
           updateStatus("currentBalance", -1 * withDrawNumber);
           document.getElementById("withDrawAmount").value = "";
