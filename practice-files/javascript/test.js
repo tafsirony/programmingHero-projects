@@ -19,3 +19,15 @@ for (var i = 0; i < sentence.length; i++) {
   }
 }
 // console.log(count);
+// if({}){
+//   console.log("I am not false")
+// }
+// else{
+//   console.log("I am false")
+// }
+if('false'){
+  console.log("I am not false")
+}
+else{
+  console.log("I am false")
+}
