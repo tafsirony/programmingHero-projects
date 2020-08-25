@@ -48,9 +48,9 @@
     <section class="d-flex justify-content-center">
       <div id="dashboard">
         <h5>Today's Date: <span id="date"></span></h5>
-        <hr>
+        <hr />
         <h1>Transaction Area</h1>
-        <hr>
+        <hr />
         <div class="row">
           <div class="col-4">
             <div class="deposit status">
@@ -71,7 +71,7 @@
             </div>
           </div>
         </div>
-        <hr>
+        <hr />
         <div class="row">
           <div class="col-5" id="auth-area">
             <h4>Deposit</h4>
@@ -96,8 +96,8 @@
         </div>
       </div>
     </section>
-   
-    <hr>
+
+    <hr />
     <footer>
       <p class="text-center mt-5">All rights reserver by Tafsir Ony</p>
     </footer>
@@ -116,8 +116,14 @@
       const depositBtn = document.getElementById("addDeposit");
       depositBtn.addEventListener("click", function () {
         const depositNumber = getInputNum("depositAmount");
-        updateStatus("currentBalance", depositNumber);
-        updateStatus("currentDeposit", depositNumber);
+        if (depositNumber < 0) {
+          alert("Deposit Number can not be negetive");
+        } else {
+          prompt("are you sure you want to withdraw?");
+          updateStatus("currentBalance", depositNumber);
+          updateStatus("currentDeposit", depositNumber);
+        }
+
         document.getElementById("depositAmount").value = "";
       });
       //withdraw btn event handler
@@ -125,8 +131,13 @@
         .getElementById("addWithdraw")
         .addEventListener("click", function () {
           const withDrawNumber = getInputNum("withDrawAmount");
-          updateStatus("currentWithdraw", withDrawNumber);
-          updateStatus("currentBalance", -1 * withDrawNumber);
+          if (withDrawNumber < 0) {
+            alert("withdraw amount can not be negetive");
+          } else {
+            confirm("are you sure you want to withdraw?");
+            updateStatus("currentWithdraw", withDrawNumber);
+            updateStatus("currentBalance", -1 * withDrawNumber);
+          }
           document.getElementById("withDrawAmount").value = "";
         });
       //function for deposit dollar
