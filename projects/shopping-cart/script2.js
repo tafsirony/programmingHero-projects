@@ -78,16 +78,16 @@ function calculateTotal() {
   // const phoneCountNum = parseInt(phoneCount.value);
   // const caseCount = document.getElementById("caseQtyInput");
   // const caseCountNum = parseInt(caseCount.value);
-  const phoneCountNum = getQtyVal('iphone');
-  const caseCountNum =getQtyVal('case');
+  const phoneCountNum = getQtyVal("iphone");
+  const caseCountNum = getQtyVal("case");
   // const subTotal = phoneCountNum * iphonePrice + caseCountNum * phoneCasePrice;
   const subTotal = phoneCountNum * iphonePrice + caseCountNum * phoneCasePrice;
   document.getElementById("subTotal").innerText = subTotal;
-  const tax = subTotal * 0.15;
+  const tax = Math.round(subTotal * 0.15);
   document.getElementById("tax").innerText = tax;
   document.getElementById("totalPrice").innerText = subTotal + tax;
 }
-function getQtyVal(product){
+function getQtyVal(product) {
   const productInput = document.getElementById(product + "QtyInput");
   const productCount = parseInt(productInput.value);
   return productCount;
